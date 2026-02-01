@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<title>SSC MCQ Exam</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Login -->
+<div class="card" id="loginBox">
+  <h2>📘 SSC MCQ Exam</h2>
+  <input type="text" id="name" placeholder="নাম">
+  <input type="text" id="roll" placeholder="রোল">
+  <input type="text" id="school" placeholder="বিদ্যালয়ের নাম">
+  <button onclick="startExam()">পরীক্ষা শুরু করুন</button>
+</div>
+
+<!-- Exam -->
+<div class="card hidden" id="examBox">
+  <div class="top-bar">
+    <span id="counter">১ / ২০০</span>
+    <span id="timer">⏰ 60:00</span>
+  </div>
+
+  <div class="progress">
+    <div id="progressBar"></div>
+  </div>
+
+  <h3 id="question"></h3>
+  <div id="options" class="options"></div>
+</div>
+
+<!-- Result -->
+<div class="card hidden" id="resultBox"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
+body{
+  font-family: 'Segoe UI', sans-serif;
+  background:#f2f5fa;
+  margin:0;
+  padding:20px;
+}
+
+.card{
+  max-width:420px;
+  margin:auto;
+  background:#fff;
+  padding:25px;
+  border-radius:16px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.1);
+}
+
+.hidden{ display:none; }
+
+h2,h3{
+  text-align:center;
+  color:#222;
+}
+
+input{
+  width:100%;
+  padding:12px;
+  margin:10px 0;
+  border-radius:10px;
+  border:1px solid #ccc;
+}
+
+button{
+  width:100%;
+  padding:12px;
+  border:none;
+  border-radius:12px;
+  background:#4f46e5;
+  color:white;
+  font-size:16px;
+  cursor:pointer;
+}
+
+.top-bar{
+  display:flex;
+  justify-content:space-between;
+  font-weight:bold;
+  margin-bottom:10px;
+}
+
+.progress{
+  height:6px;
+  background:#e5e7eb;
+  border-radius:5px;
+  margin-bottom:15px;
+}
+
+#progressBar{
+  height:100%;
+  width:0%;
+  background:#4f46e5;
+  border-radius:5px;
+}
+
+.options button{
+  background:#f1f5ff;
+  color:#111;
+  border:1px solid #dbeafe;
+  margin:8px 0;
+}
+
+.options button:hover{
+  background:#4f46e5;
+  color:white;
+}
+function loadQuestion(){
+ let q=questions[index];
+ document.getElementById("question").innerText=q.q;
+ document.getElementById("counter").innerText=
+  `${index+1} / ${questions.length}`;
+
+ document.getElementById("progressBar").style.width=
+  ((index+1)/questions.length)*100 + "%";
+
+ let opt="";
+ q.options.forEach((o,i)=>{
+  opt+=`<button onclick="check(${i})">${o}</button>`;
+ });
+ document.getElementById("options").innerHTML=opt;
+}
+document.getElementById("resultBox").innerHTML=`
+<h2>স্কোর: ${score}/${questions.length}</h2>
+<h1>${pass?"😄 অভিনন্দন! PASS":"❌ দুঃখিত! FAIL"}</h1>
+`;
