@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Technique Easy Education</title>
+  <meta name="description" content="Technique Easy Education – বাংলাদেশের একটি আধুনিক অনলাইন শিক্ষা প্রতিষ্ঠান" />
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0;font-family:Arial,Helvetica,sans-serif}
+    body{background:#f5f7fb;color:#222;line-height:1.6}
+    header{background:linear-gradient(90deg,#0d47a1,#1976d2);color:#fff;padding:20px}
+    header h1{font-size:28px}
+    nav{margin-top:10px}
+    nav a{color:#fff;margin-right:15px;text-decoration:none;font-weight:bold}
+    nav a:hover{text-decoration:underline}
+
+    .container{max-width:1100px;margin:auto;padding:20px}
+    .hero{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:center}
+    .hero h2{font-size:32px;color:#0d47a1}
+    .hero p{margin:15px 0}
+    .btn{display:inline-block;background:#1976d2;color:#fff;padding:10px 18px;border-radius:6px;text-decoration:none}
+    .btn:hover{background:#0d47a1}
+
+    .section{margin-top:50px}
+    .section h3{font-size:26px;color:#0d47a1;margin-bottom:15px}
+
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+    .card{background:#fff;border-radius:10px;padding:20px;box-shadow:0 5px 15px rgba(0,0,0,.08)}
+    .card h4{margin-bottom:10px;color:#1976d2}
+
+    .courses li{margin-left:20px}
+
+    form{background:#fff;padding:20px;border-radius:10px;box-shadow:0 5px 15px rgba(0,0,0,.08)}
+    form input,form textarea{width:100%;padding:10px;margin:8px 0;border:1px solid #ccc;border-radius:6px}
+    form button{border:none;cursor:pointer}
+
+    footer{background:#0d47a1;color:#fff;text-align:center;padding:15px;margin-top:50px}
+
+    @media(max-width:768px){
+      .hero{grid-template-columns:1fr}
+      header h1{font-size:22px}
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Technique Easy Education</h1>
+  <p>বাংলাদেশের আধুনিক অনলাইন শিক্ষা প্রতিষ্ঠান</p>
+  <nav>
+    <a href="#home">হোম</a>
+    <a href="#about">আমাদের সম্পর্কে</a>
+    <a href="#courses">কোর্স</a>
+    <a href="#services">সেবা</a>
+    <a href="#contact">যোগাযোগ</a>
+  </nav>
+</header>
+
+<section id="home" class="container hero">
+  <div>
+    <h2>শিক্ষা হোক সহজ, স্মার্ট ও ডিজিটাল</h2>
+    <p>আমাদের প্রতিটি বইয়ের ভেতরে QR কোড আছে। স্ক্যান করলেই ভিডিও ক্লাস – একদম সহজভাবে বুঝানো হয়।</p>
+    <a class="btn" href="#courses">কোর্স দেখুন</a>
+  </div>
+  <div>
+    <img src="https://via.placeholder.com/500x300" alt="Online Education" style="width:100%;border-radius:12px" />
+  </div>
+</section>
+
+<section id="about" class="container section">
+  <h3>আমাদের সম্পর্কে</h3>
+  <p>
+    Technique Easy Education একটি শিক্ষামূলক উদ্যোগ যেখানে গরিব ও মেধাবী শিক্ষার্থীদের জন্য
+    সহজ ভাষায় পড়াশোনা নিশ্চিত করা হয়। আমরা SSC (৯ম–১০ম) থেকে শুরু করে বিভিন্ন স্কিল ডেভেলপমেন্ট কোর্স প্রদান করি।
+  </p>
+</section>
+
+<section id="courses" class="container section">
+  <h3>আমাদের কোর্সসমূহ</h3>
+  <div class="cards">
+    <div class="card">
+      <h4>SSC (৯ম–১০ম)</h4>
+      <ul class="courses">
+        <li>বাংলা</li>
+        <li>ইংরেজি</li>
+        <li>গণিত</li>
+        <li>বিজ্ঞান</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h4>কম্পিউটার ও আইটি</h4>
+      <ul class="courses">
+        <li>MS Word / Excel</li>
+        <li>ডাটা এন্ট্রি</li>
+        <li>ডিজিটাল মার্কেটিং</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h4>ফ্রি অনলাইন ক্লাস</h4>
+      <ul class="courses">
+        <li>লাইভ ক্লাস</li>
+        <li>রেকর্ডেড ভিডিও</li>
+        <li>MCQ পরীক্ষা</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="services" class="container section">
+  <h3>আমাদের সেবা</h3>
+  <div class="cards">
+    <div class="card">
+      <h4>QR Code শিক্ষা</h4>
+      <p>বইয়ের ভিতর QR কোড স্ক্যান করলেই সরাসরি শিক্ষক হাজির।</p>
+    </div>
+    <div class="card">
+      <h4>ফ্রি রেজিস্ট্রেশন</h4>
+      <p>অনলাইনে ফ্রি রেজিস্ট্রেশন করে ক্লাস ও পরীক্ষায় অংশ নিন।</p>
+    </div>
+    <div class="card">
+      <h4>পুরস্কার</h4>
+      <p>মেধাবী শিক্ষার্থীদের জন্য লটারি ও পুরস্কার ব্যবস্থা।</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="container section">
+  <h3>যোগাযোগ করুন</h3>
+  <form onsubmit="sendMsg(event)">
+    <input type="text" id="name" placeholder="আপনার নাম" required />
+    <input type="email" id="email" placeholder="ইমেইল" required />
+    <textarea id="message" rows="4" placeholder="আপনার বার্তা"></textarea>
+    <button class="btn" type="submit">পাঠান</button>
+  </form>
+  <p id="status" style="margin-top:10px"></p>
+</section>
+
+<footer>
+  <p>© 2026 Technique Easy Education | All Rights Reserved</p>
+</footer>
+
+<script>
+  function sendMsg(e){
+    e.preventDefault();
+    document.getElementById('status').innerText = 'ধন্যবাদ! আপনার বার্তা পাঠানো হয়েছে (ডেমো)।';
+    e.target.reset();
+  }
+</script>
+
+</body>
+</html>
